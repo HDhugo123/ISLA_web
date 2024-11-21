@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Zaragoza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#mapa">Lugares clave</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal con el mapa -->
+    <main>
+        <section id="mapa">
+            <h1>Bienvenido a Zaragoza</h1>
+            <p>Explora los lugares más emblemáticos de la ciudad.</p>
+            <div id="map-container">
+                <!-- Mapa interactivo -->
+                <img src="images/mapa_zaragoza.png" alt="Mapa de Zaragoza" id="mapa-ciudad">
+                <!-- Puntos interactivos -->
+                <div class="punto" id="pilar" data-lugar="pilar" style="top: 50%; left: 65%;">La Seo</div>
+                <div class="punto" id="seo" data-lugar="seo" style="top: 40%; left: 55%;">Basílica del Pilar</div>
+                <div class="punto" id="sitios" data-lugar="sitios" style="top: 90%; left: 55%;">Plaza de Los Sitios</div>
+                <div class="punto" id="aljaferia" data-lugar="aljaferia" style="top: 40%; left: 5%;">Aljaferia</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,6 @@
-/* General */
+/* =======================
+   General Styles
+========================== */
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
@@ -8,18 +10,24 @@ body {
 
 h1, h2 {
     color: #333;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 p {
     margin: 0 0 10px;
+    line-height: 1.5;
 }
 
+/* =======================
+   Header & Navbar
+========================== */
 header {
-    background-color: #4CAF50;
+    background-color: #1A3B5D; /* Azul oscuro elegante */
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -29,7 +37,7 @@ header {
 
 .navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
@@ -47,8 +55,9 @@ header {
     color: white;
     display: none;
     cursor: pointer;
+    position: relative;
+    right: 10px; /* Posicionado a la derecha */
 }
-
 
 .navbar {
     display: flex;
@@ -74,7 +83,59 @@ header {
     font-weight: 600;
 }
 
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #1A3B5D; /* Fondo azul oscuro */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 8px 8px;
+        text-align: center; /* Centra las letras */
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+}
+
+/* =======================
+   Imágenes de lugares
+========================== */
+.imagen-lugar {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad para imágenes */
+@media (max-width: 768px) {
+    .imagen-lugar {
+        max-width: 100%; /* Ajusta el tamaño para pantallas pequeñas */
+        margin: 10px auto;
+    }
+}
+
+
+/* =======================
+   Main Content
+========================== */
 main {
     text-align: center;
     padding: 20px;
@@ -92,31 +153,47 @@ main {
     border: 2px solid #ddd;
 }
 
+/* =======================
+   Botones interactivos del mapa
+========================== */
 .punto {
     position: absolute;
-    background-color: rgba(255, 0, 0, 0.7);
+    background-color: #FF5733; /* Color inicial: naranja brillante */
     color: white;
-    padding: 5px;
-    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px; /* Tamaño del botón */
+    border-radius: 50%; /* Forma redondeada */
     cursor: pointer;
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    transition: all 0.3s ease; /* Animación para efectos */
 }
 
-.imagen-lugar {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+.punto:hover {
+    background-color: #FFC300; /* Color al pasar el ratón: amarillo brillante */
+    transform: translate(-50%, -50%) scale(1.2); /* Aumentar tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra elegante */
 }
 
-.main-content {
-    padding: 20px;
-    text-align: center;
+/* Responsividad de los botones interactivos */
+@media (max-width: 1024px) {
+    .punto {
+        font-size: 12px; /* Tamaño reducido para tabletas */
+        padding: 8px 12px; /* Ajustar proporción */
+    }
 }
 
-/* Footer */
+@media (max-width: 768px) {
+    .punto {
+        font-size: 10px; /* Tamaño más pequeño para móviles */
+        padding: 6px 10px; /* Ajustar proporción */
+    }
+}
+
+/* =======================
+   Footer
+========================== */
 footer {
     background-color: #333;
     color: #fff;
@@ -163,32 +240,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        background-color: #4CAF50;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        border-radius: 0 0 8px 8px;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-        text-align: center;
-    }
 }

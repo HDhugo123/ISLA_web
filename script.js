@@ -1,15 +1,17 @@
-// Manejo de clics en los puntos del mapa
+// Funcionalidad: Redirigir al hacer clic en puntos del mapa
 document.querySelectorAll('.punto').forEach(punto => {
     punto.addEventListener('click', () => {
         const lugar = punto.dataset.lugar;
-        window.location.href = `lugares/${lugar}.html`;
+        window.location.href = `lugares/${lugar}.html`; // Cambiar a la página del lugar correspondiente
     });
 });
 
-// Menu Toggle for Mobile
-const menuToggle = document.getElementById('menu-toggle');
-const navbar = document.getElementById('navbar');
+// Funcionalidad: Toggle del menú desplegable en dispositivos móviles
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
 
-menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('active');
+    menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
 });

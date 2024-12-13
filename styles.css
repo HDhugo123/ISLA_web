@@ -6,10 +6,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #DEE7E7; /* Fondo claro para un diseño limpio */
 }
 
 h1, h2 {
-    color: #333;
+    color: #535657;
     margin: 0;
 }
 
@@ -27,12 +28,13 @@ p {
    Header & Navbar
 ========================== */
 header {
-    background-color: #1A3B5D; /* Azul oscuro elegante */
+    background-color: #4F646F; /* Azul oscuro elegante */
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
 }
 
 .navbar-container {
@@ -43,7 +45,7 @@ header {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: white;
 }
@@ -56,7 +58,7 @@ header {
     display: none;
     cursor: pointer;
     position: relative;
-    right: 10px; /* Posicionado a la derecha */
+    right: 10px;
 }
 
 .navbar {
@@ -75,11 +77,14 @@ header {
     font-size: 16px;
     font-weight: 400;
     color: white;
-    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #ffcb05;
+    color: white;
+    background-color: #ffcb05;
     font-weight: 600;
 }
 
@@ -92,13 +97,13 @@ header {
     .navbar {
         display: none;
         flex-direction: column;
-        background-color: #1A3B5D; /* Fondo azul oscuro */
+        background-color: #B7ADCF;
         position: absolute;
         top: 60px;
         right: 0;
         width: 200px;
         border-radius: 0 0 8px 8px;
-        text-align: center; /* Centra las letras */
+        text-align: center;
     }
 
     .navbar.active {
@@ -120,6 +125,7 @@ header {
     object-fit: cover;
     display: block;
     margin: 20px auto;
+    border-radius: 15px; /* Bordes redondeados */
     border: 2px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -127,11 +133,10 @@ header {
 /* Responsividad para imágenes */
 @media (max-width: 768px) {
     .imagen-lugar {
-        max-width: 100%; /* Ajusta el tamaño para pantallas pequeñas */
+        max-width: 100%;
         margin: 10px auto;
     }
 }
-
 
 /* =======================
    Main Content
@@ -150,6 +155,7 @@ main {
 
 #mapa-ciudad {
     width: 100%;
+    border-radius: 12px; /* Bordes redondeados para el mapa */
     border: 2px solid #ddd;
 }
 
@@ -158,36 +164,37 @@ main {
 ========================== */
 .punto {
     position: absolute;
-    background-color: #FF5733; /* Color inicial: naranja brillante */
-    color: white;
+    background-color: #B7ADCF;
+    color: #535657;
     font-size: 14px;
     font-weight: bold;
-    padding: 10px 15px; /* Tamaño del botón */
-    border-radius: 50%; /* Forma redondeada */
+    padding: 10px 15px;
+    border-radius: 20px; /* Forma más redondeada */
     cursor: pointer;
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    transition: all 0.3s ease; /* Animación para efectos */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .punto:hover {
-    background-color: #FFC300; /* Color al pasar el ratón: amarillo brillante */
-    transform: translate(-50%, -50%) scale(1.2); /* Aumentar tamaño */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    background-color: #FFC300;
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsividad de los botones interactivos */
 @media (max-width: 1024px) {
     .punto {
-        font-size: 12px; /* Tamaño reducido para tabletas */
-        padding: 8px 12px; /* Ajustar proporción */
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
 
 @media (max-width: 768px) {
     .punto {
-        font-size: 10px; /* Tamaño más pequeño para móviles */
-        padding: 6px 10px; /* Ajustar proporción */
+        font-size: 10px;
+        padding: 6px 10px;
     }
 }
 
@@ -200,6 +207,7 @@ footer {
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
+    border-radius: 15px 15px 0 0;
 }
 
 .footer-container {
@@ -234,8 +242,8 @@ footer {
 }
 
 footer a {
-    color: #4CAF50;
-    text-decoration: none;
+    color: #f3c0ff;
+    text-decoration: solid;
 }
 
 footer a:hover {
